@@ -5,7 +5,7 @@ import logging
 
 from slogger.handlers import *
 
-__all__ = ["builtin_logger", "DEBUG", "INFO", "WARN", "ERROR", "CRITICAL", "FATAL"]
+__all__ = ["builtin_logger", "instrument", "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL", "FATAL"]
 
 
 DEBUG = logging.DEBUG
