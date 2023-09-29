@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slogger"
+description = "Structured logging in python"
+license = {file = "LICENSE"}
+keywords = ["logging", "logger", "structured", "structured logging", "structured logger", "slog"]
+authors = [
+  {email = "kabadagiomkar@gmail.com", name = "Omkar Kabadagi"},
+]
+maintainers = [
+  {email = "kabadagiomkar@gmail.com", name = "Omkar Kabadagi"},
+]
+version = "0.1.0"
+
+[tool.setuptools.packages]
+find = {namespaces = false}
