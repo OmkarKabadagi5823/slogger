@@ -1,5 +1,6 @@
 from slogger import builtin_logger, instrument
 
+
 @instrument(capture=["a", "b"])
 def divide_two_floats(numerator: float, denominator: float) -> float:
     if denominator == 0:
@@ -9,6 +10,7 @@ def divide_two_floats(numerator: float, denominator: float) -> float:
     builtin_logger.debug("Division Successful", result=result)
 
     return result
+
 
 def main():
     builtin_logger.info("Program to add numbers")
