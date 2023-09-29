@@ -37,7 +37,7 @@ async def echo(char: str):
 
 @echo_service.get("/toggle/{char}")
 @instrument(name="toggle", capture=["char"], route="/:id")
-async def echo(char: str):
+async def toggle(char: str):
     if not char.isalpha() or len(char) != 1:
         builtin_logger.error("Received invalid character", char=char)
         raise HTTPException(status_code=422, detail="Value must be a single alphabet character")
