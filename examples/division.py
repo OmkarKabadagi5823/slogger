@@ -1,4 +1,4 @@
-from slogger.slogger import builtin_logger, instrument
+from slogger import builtin_logger, instrument
 
 @instrument(capture=["a", "b"])
 def divide_two_floats(numerator: float, denominator: float) -> float:
@@ -17,10 +17,14 @@ def main():
         result = divide_two_floats(5, 2)
         builtin_logger.info(f"result {result}", result=result)
     except Exception as e:
-        builtin_logger.error("Exception whil division", err=e)
+        builtin_logger.error("Exception whil division", err=repr(e))
 
     try:
         result = divide_two_floats(5, 0)
         builtin_logger.info(f"result {result}", result=result)
     except Exception as e:
-        builtin_logger.error("Exception while division", err=e)
+        builtin_logger.error("Exception while division", err=repr(e))
+
+
+if __name__ == "__main__":
+    main()

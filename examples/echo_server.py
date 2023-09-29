@@ -2,7 +2,7 @@ import asyncio
 from fastapi import FastAPI, HTTPException
 import uvicorn
 
-from slogger.slogger import builtin_logger, instrument
+from slogger import builtin_logger, instrument
 
 
 echo_service = FastAPI()
