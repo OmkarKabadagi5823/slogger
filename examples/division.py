@@ -23,4 +23,4 @@ def main():
         result = divide_two_floats(5, 0)
         builtin_logger.info(f"result {result}", result=result)
     except Exception as e:
-        builtin_logger.error("Exception whil division", err=e)
+        builtin_logger.error("Exception while division", err=e)
